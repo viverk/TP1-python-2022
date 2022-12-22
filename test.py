@@ -104,7 +104,7 @@ class FlightPath:
     def add(self, dst_airport: Airport, via_flight: Flight) -> None:
         if self.path[-1] != via_flight.src_airport:
             raise FlightPathBroken(
-                "Flight does not connect to last airport in path")
+                "erreur flightPathBroken")
         self.path.append(via_flight)
         self.path.append(dst_airport)
 
